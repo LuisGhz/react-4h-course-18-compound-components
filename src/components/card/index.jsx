@@ -1,9 +1,7 @@
+import { Container } from "./styles/card";
 
-const Card = () => {
-  return (
-  <div>
-    Card
-  </div>);
+const Card = ({ children, ...restProps }) => {
+  return <Container { ...restProps } >{ children }</Container>
 }
 
 export default Card;
