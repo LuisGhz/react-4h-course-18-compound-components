@@ -31,3 +31,20 @@ export const Title = styled.h1`
 export const Text = styled.p`
   color: grey;
 `;
+
+export const Button = styled.button`
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: black;
+  cursor: pointer;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+
+  &:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+`;
