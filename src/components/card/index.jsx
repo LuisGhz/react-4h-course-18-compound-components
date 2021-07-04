@@ -1,4 +1,4 @@
-import { Container, Image, Body, Title, Text } from "./styles/card";
+import { Container, Image, Body, Title, Text, Button } from "./styles/card";
 
 const Card = ({ children, ...restProps }) => {
   return <Container { ...restProps } >{ children }</Container>
@@ -19,5 +19,10 @@ Card.Body = ({ children, ...restProps }) => {
 Card.Text = ({ children, ...restProps }) => {
   return <Text { ...restProps } >{ children }</Text>
 }
+
+Card.Button = ({ children, ...restProps }) => {
+  return <Button { ...restProps } >{ children }</Button>
+}
+
 
 export default Card;
