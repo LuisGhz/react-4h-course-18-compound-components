@@ -8,6 +8,10 @@ function App() {
           src="https://reqres.in/img/faces/7-image.jpg"
           alt="Alternative message"
         />
+        <Card.Body>
+          <Card.Title>Shiang ju</Card.Title>
+          <Card.Text>shiju@gmail.com</Card.Text>
+        </Card.Body>
       </Card>
     </div>
   );
