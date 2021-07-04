@@ -1,19 +1,32 @@
+import { useState, useEffect } from "react";
 import Card from "components/card";
+import axios from "axios";
 
 function App() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get('https://reqres.in/api/users?page=2');
+      setUsers(res.data.data);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div>
-      <Card>
-        <Card.Image 
-          src="https://reqres.in/img/faces/7-image.jpg"
-          alt="Alternative message"
-        />
-        <Card.Body>
-          <Card.Title>Shiang ju</Card.Title>
-          <Card.Text>shiju@gmail.com</Card.Text>
-          <Card.Button>Details</Card.Button>
-        </Card.Body>
-      </Card>
+      { users.map((user, i) => (
+        <Card key={ i } >
+          <Card.Image 
+            src={ user.avatar }
+            alt="Alternative message"
+          />
+          <Card.Body>
+            <Card.Title>{ user.first_name }</Card.Title>
+            <Card.Text>{ user.email }</Card.Text>
+            <Card.Button>Details</Card.Button>
+          </Card.Body>
+        </Card>
+      ))}
     </div>
   );
 }
