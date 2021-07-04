@@ -13,4 +13,21 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-`
+`;
+
+export const Body = styled.div`
+  min-height: 1px;
+  padding: 1.25rem;
+  text-align: center;
+`;
+
+export const Title = styled.h1`
+  font-size: 1.25rem;
+  font-family: cursive;
+  font-weight: bold;
+  margin: 0;
+`;
+
+export const Text = styled.p`
+  color: grey;
+`;
